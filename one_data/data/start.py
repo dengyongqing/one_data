@@ -28,7 +28,7 @@ def get_today():
     return today
 
 start()
-schedule.every().day.at("16:00").do(start).tag('my_job')
-while 1:
-    schedule.run_pending()
-    time.sleep(1)
+# schedule.every().day.at("16:00").do(start).tag('my_job')
+# while 1:
+#     schedule.run_pending()
+#     time.sleep(1)
