@@ -16,18 +16,18 @@ mail_user="1715620917@qq.com"    #用户名
 mail_pass="aagtpoeanndxbigj"   #口令 
 
 sender = ['1715620917@qq.com']
-# receivers = ['dengyongqing@aliyun.com']
+receivers = ['dengyongqing@aliyun.com']
 
-receivers = [
-    'dengyongqing@aliyun.com', 
-    '1148674087@qq.com',    #邓永康
-    '13816904330@163.com', #姜飞标
-    '317223343@qq.com',    #陈贵
-    '312204337@qq.com',    #汤东强
-    '511868788@qq.com',    #田世峰
-    '448943531@qq.com',    #杨少文
-    '196863227@qq.com',    #joshua
-    ]
+# receivers = [
+#     'dengyongqing@aliyun.com', 
+#     '1148674087@qq.com',    #邓永康
+#     '13816904330@163.com', #姜飞标
+#     '317223343@qq.com',    #陈贵
+#     '312204337@qq.com',    #汤东强
+#     '511868788@qq.com',    #田世峰
+#     '448943531@qq.com',    #杨少文
+#     '196863227@qq.com',    #joshua
+#     ]
 
 def send_mail(msg, flag):
     for mail in receivers:   # 获取每行的index、row
@@ -39,7 +39,7 @@ def send_mail(msg, flag):
             print(e)
     
 def send_notice_mail(sender, receivers, msg):
-    print("I'm working......发送选股邮件")
+    print("I'm working......发送通知邮件")
 
     message = MIMEText(msg, 'html', 'utf-8')
     message['From'] = formataddr(["小安", "dengyongqing@aliyun.com"])
