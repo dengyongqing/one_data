@@ -16,7 +16,7 @@ def reconice(request):
         if row.code in question:
             return HttpResponse("code:" + row.code)
 
-    return HttpResponse("I dont not know“)
+    return HttpResponse("我还不知道呢")
 
 
 
