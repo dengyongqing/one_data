@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from one_data.controllers.reconice import reconice
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^reconice', reconice)
 ]
