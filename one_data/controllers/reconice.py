@@ -4,8 +4,9 @@ import pandas as pd
 from django.http import HttpResponse
 
 def reconice(request):
-
+    request.encoding='utf-8'
     question=request.GET.get('question')
+    question=question.encode('utf-8')
     stock_basics = ts.get_stock_basics()
     data = pd.DataFrame(stock_basics)
 
