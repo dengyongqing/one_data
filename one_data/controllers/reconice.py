@@ -3,7 +3,7 @@
 # import pandas as pd
 from django.http import HttpResponse
 
-def happy(request):
+def reconice(request):
     return HttpResponse("000001")
 
 
