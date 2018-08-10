@@ -19,7 +19,7 @@ def reconice(request):
     for index, row in data.iterrows():   # 获取每行的index、row
         pe = row["pe"]
         pb = row["pb"]
-        close = row["close"]
+        # close = row["close"]
         code = row.name
         if row["name"] == stock_name:
             if stock_property == "pe":
