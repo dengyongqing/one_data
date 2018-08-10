@@ -14,7 +14,7 @@ def reconice(request):
 
     for index, row in data.iterrows():   # 获取每行的index、row
         if row["name"] in question:
-            return HttpResponse("name" + row["name"])
+            return HttpResponse(row.name)
 
     return HttpResponse("我还不知道呢")
 
