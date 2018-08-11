@@ -22,14 +22,11 @@ def reconice(request):
         # close = row["close"]
         code = row.name
         if row["name"] == stock_name:
-            if stock_property == "pe":
-                return HttpResponse(pe)
-            elif stock_property == "pb":
-                return HttpResponse(pb)
-            # elif stock_property == "股价":
-            #     return HttpResponse(close)
-            elif stock_property == "代码":
+            if stock_property == "code":
                 return HttpResponse(code)
+            else:
+                return HttpResponse(row[stock_property])
+           
             
 
     return HttpResponse("我还不知道呢")
