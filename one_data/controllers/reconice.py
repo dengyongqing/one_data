@@ -25,11 +25,12 @@ def reconice(request):
             if stock_property == "code":
                 return HttpResponse(code)
             else:
-                return HttpResponse(row[stock_property])
-           
-            
-
-    return HttpResponse("我还不知道呢")
+                if !(row[stock_property]):
+                    return HttpResponse("请输入例句如下：股票中国平安的市盈率，中国平安股票的市盈率，等等")
+                else:
+                    return HttpResponse(row[stock_property])
+                
+    return HttpResponse("我还没有学会呢")
 
 
 
