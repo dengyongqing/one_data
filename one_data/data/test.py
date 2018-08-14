@@ -46,7 +46,7 @@ def init():
             print("okkkkkkkk")
         else:
             print("xxxxxxxxxx")
-        # print(not len(data[data["name"]=="东方财富111"].index))
+        print(not len(data[data["name"]=="东方财富11"]["name"]))
         # print(data[data["name"]=="东方财富"].name[0])
         # for index, row in data.iterrows():   # 获取每行的index、row
         #     # if_exists = 'append'

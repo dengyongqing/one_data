@@ -22,7 +22,7 @@ def reconice(request):
             return HttpResponse(data[data["name"]==stock_name].index[0])
         else:
             target = data[data["name"]==stock_name][stock_property]
-            if not (target):
+            if not (len(target)):
                 return HttpResponse("请输入例句如下：股票中国平安的市盈率，中国平安股票的市盈率，等等")
             else:
                 # data[data["name"]=="东方财富"]["pe"][0]
