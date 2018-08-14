@@ -16,21 +16,19 @@ def reconice(request):
     stock_basics = ts.get_stock_basics()
     data = pd.DataFrame(stock_basics)
 
-    for index, row in data.iterrows():   # 获取每行的index、row
-        pe = row["pe"]
-        pb = row["pb"]
-        # close = row["close"]
-        code = row.name
-        if row["name"] == stock_name:
-            if stock_property == "code":
-                return HttpResponse(code)
+    # for index, row in data.iterrows():   # 获取每行的index、row
+    if  (len(data[data["name"]==stock_name].index)):
+        if stock_property == "code":
+            return HttpResponse(data[data["name"]==stock_name].index[0])
+        else:
+            target = data[data["name"]==stock_name][stock_property]
+            if not (target):
+                return HttpResponse("请输入例句如下：股票中国平安的市盈率，中国平安股票的市盈率，等等")
             else:
-                if not (row[stock_property]):
-                    return HttpResponse("请输入例句如下：股票中国平安的市盈率，中国平安股票的市盈率，等等")
-                else:
-                    return HttpResponse(row[stock_property])
+                # data[data["name"]=="东方财富"]["pe"][0]
+                return HttpResponse(target[0])
+                # return HttpResponse(row[stock_property])
                 
-    return HttpResponse("我还没有学会呢")
-
+    return HttpResponse("请输入例句如下：股票中国平安的市盈率，中国平安股票的市盈率，等等")
 
 

@@ -39,7 +39,7 @@ def job_1():
         data = pd.DataFrame(stock_basics)
         
         data.to_sql('stock_basics',engine,index=True,if_exists='replace')
-        count = 1;
+        count = 1
         print('data')
         for index, row in data.iterrows():   # 获取每行的index、row
             if_exists = 'append'
@@ -471,11 +471,11 @@ def init_data():
     # worker_thread = threading.Thread(target=worker_main)
     # worker_thread.start()
     job_1()
-    job_2()
-    job_3()
-    job_4()
-    job_5()
-    job_6()
-    job_7()
-    job_8()
-    job_9()
+    # job_2()
+    # job_3()
+    # job_4()
+    # job_5()
+    # job_6()
+    # job_7()
+    # job_8()
+    # job_9()
