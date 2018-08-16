@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from one_data.controllers.reconice import reconice
+from one_data.controllers.ma_up_count import ma_up_count
+from one_data.controllers.new_up_count import new_up_count
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^reconice', reconice)
+    url(r'^reconice', reconice),
+    url(r'^ma_up_count', ma_up_count),
+    url(r'^new_up_count', new_up_count)
 ]

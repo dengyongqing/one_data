@@ -39,14 +39,17 @@ def init():
         y_close = 0
         up_count = 0
         down_count = 0
-        data = pd.DataFrame(stock_basics)
-        # data.to_sql('stock_basics',engine,index=True,if_exists='replace')
-        print("I'm working......插入成功")
-        if 0:
-            print("okkkkkkkk")
-        else:
-            print("xxxxxxxxxx")
-        print(not len(data[data["name"]=="东方财富11"]["name"]))
+
+        # get_k_data = ts.get_k_data("sh000001", start='1990-12-19')
+        # my_data = pd.DataFrame(get_k_data)
+        # print(my_data["date"][0])
+
+        data = {'水果':['苹果','梨','草莓'],
+       '数量':[3,2,5],
+       '价格':[10,9,8]}
+        df = pd.DataFrame(data)
+        print(data)
+
         # print(data[data["name"]=="东方财富"].name[0])
         # for index, row in data.iterrows():   # 获取每行的index、row
         #     # if_exists = 'append'
